@@ -13,8 +13,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "src/main.ts",
-            "method": ["GET", "POST","PATCH", "DELETE"]
+            "dest": "src/main.ts"
         }
     ]
 }
