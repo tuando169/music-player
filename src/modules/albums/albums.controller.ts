@@ -38,4 +38,20 @@ export class AlbumsController {
   async remove(@Param('id') id: string) {
     return this.albumsService.remove(id);
   }
+
+  @Patch('add/:id')
+  async addToAlbum(
+    @Param('id') album_id: string,
+    @Body('song_id_list') song_id_list: Array<string>,
+  ) {
+    return this.albumsService.addToAlbum(album_id, song_id_list);
+  }
+
+  @Patch('share/:id')
+  async share(
+    @Param('id') album_id: string,
+    @Body('share_user') user_id: string,
+  ) {
+    return this.albumsService.share(album_id, user_id);
+  }
 }

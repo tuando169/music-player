@@ -16,6 +16,9 @@ export class Album {
 
   @Prop({ enum: ['PRIVATE', 'PUBLIC'], default: 'PRIVATE' })
   status: string;
+
+  @Prop()
+  share_users: Array<string>;
 }
 
 export const AlbumSchema = SchemaFactory.createForClass(Album);
