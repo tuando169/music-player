@@ -12,6 +12,9 @@ export class Album {
   image: string;
 
   @Prop({ required: true })
+  founder: string;
+
+  @Prop({ required: true })
   song_list: Array<string>;
 
   @Prop({ enum: ['PRIVATE', 'PUBLIC'], default: 'PRIVATE' })
